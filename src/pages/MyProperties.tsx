@@ -57,7 +57,7 @@ export const MyProperties: React.FC<MyPropertiesProps> = ({ contract }) => {
           }}
           onClick={() => {
             // Rediriger vers la page des détails de la propriété
-            window.location.href = `/property/${property.id}`;
+            window.location.href = `/property/${property.name.toString()}`;
           }}
         />
       ))}
