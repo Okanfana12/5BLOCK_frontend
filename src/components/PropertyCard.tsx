@@ -21,8 +21,17 @@ const PropertyTypeIcon = ({ type }: { type: PropertyType }) => {
 };
 
 export const PropertyCard: React.FC<PropertyCardProps> = ({ property, onClick }) => {
-  const { imageUrl, name, location, value, surface, type } = property;
-
+  const imageUrl = property[5];
+  const type = property[0];
+  const name = property[1];
+  const location = property[1];
+  const value = property[2];
+  const surface = property[3];
+  console.log('PropertyCard', property);
+  console.log('Image URL', imageUrl);
+  console.log('Type', type);
+  console.log('Name', name);
+  console.log('value', value);
   return (
     <div
       className="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer transform transition-transform hover:scale-105"
@@ -37,7 +46,7 @@ export const PropertyCard: React.FC<PropertyCardProps> = ({ property, onClick })
     >
       <div className="relative h-48">
         <img
-          src="https://placehold.co/300"
+          src={imageUrl || 'https://placehold.co/300'}
           alt={name}
           className="w-full h-full object-cover"
           onError={(e) => {
@@ -52,8 +61,10 @@ export const PropertyCard: React.FC<PropertyCardProps> = ({ property, onClick })
         <h3 className="text-lg font-semibold mb-1">{name}</h3>
         <p className="text-gray-600 text-sm mb-2">{location}</p>
         <div className="flex justify-between items-center">
-          <span className="text-blue-600 font-bold">{value} ETH</span>
-          <span className="text-gray-500 text-sm">{surface} m²</span>
+          <span className="text-blue-600 font-bold">{value.toString()}
+            Euro
+          </span>
+          <span className="text-gray-500 text-sm">{surface.toString()} m²</span>
         </div>
       </div>
     </div>

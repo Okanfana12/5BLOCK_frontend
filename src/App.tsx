@@ -8,7 +8,7 @@ import { Exchange } from './pages/Exchange';
 import { PropertyDetails } from './pages/PropertyDetails';
 
 // Adresse du contrat déployé sur Hardhat
-const CONTRACT_ADDRESS = '0xc351628EB244ec633d5f21fBD6621e1a683B1181';
+const CONTRACT_ADDRESS = '0x162A433068F51e18b7d13932F27e66a3f99E6890';
 
 // ABI du contrat (remplacez par l'ABI de votre contrat RealEstate)
 const CONTRACT_ABI = [
